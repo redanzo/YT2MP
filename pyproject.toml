@@ -7,6 +7,7 @@ authors = ["Replit user <<>>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 Flask = "^2.3.2"
+pytube = "^15.0.0"
 
 [tool.poetry.dev-dependencies]
 

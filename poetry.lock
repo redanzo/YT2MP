@@ -75,6 +75,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "pytube"
+version = "15.0.0"
+description = "Python 3 library for downloading YouTube Videos."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "werkzeug"
 version = "2.3.4"
 description = "The comprehensive WSGI web application library."
@@ -91,7 +99,7 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d7a65ba75d9fd1d70398a76955d93d28129b8c09a3b56e10fef71ce427090c8b"
+content-hash = "5ebacdaf58e65ba50dd1c6fa147e95c0d56c9357ab915b7813f4c229f4cb610c"
 
 [metadata.files]
 blinker = []
@@ -101,4 +109,5 @@ flask = []
 itsdangerous = []
 jinja2 = []
 markupsafe = []
+pytube = []
 werkzeug = []
