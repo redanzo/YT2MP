@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, send_file
-import pytube
+import pytube, os
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ def index():
 
 @app.route('/download', methods=['POST'])
 def download():
-    # get the YouTube video link from the form
+     # get the YouTube video link from the form
     video_url = request.form['video_url']
 
     # create a YouTube object and extract the audio stream
@@ -23,7 +23,12 @@ def download():
     audio_stream.download(output_path=".", filename=filename)
 
     # return the MP3 file to the user for download
-    return send_file(filename, as_attachment=True)
+    response = send_file(filename, as_attachment=True)
+
+    # remove the file from the file system
+    os.remove(filename)
+
+    return response
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
