@@ -1,2 +1,2 @@
 # YT2MP
-personal python web-app to convert youtube to mp3/mp4
+personal python web-app to convert video to mp3
